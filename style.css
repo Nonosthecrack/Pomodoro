@@ -9,7 +9,6 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: larger;
 }
 h1 {
   font-size: 8ch;
@@ -21,8 +20,8 @@ h1 {
   border: 2px, solid, black;
   width: 25%;
   margin: auto;
-  padding-top: 2ch;
-  padding-bottom: 2ch;
+  padding-top: 1ch;
+  padding-bottom: 1ch;
   word-spacing: 4ch;
 }
 button {
@@ -32,7 +31,11 @@ button {
   border: 0px;
   background-color: #0000ff;
   font-size: large;
+  font-family: "Oswald", sans-serif;
 }
 button:hover {
+  color: wheat;
+}
+button.active {
   color: wheat;
 }
