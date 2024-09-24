@@ -11,21 +11,36 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
+
+    <script
+      src="https://kit.fontawesome.com/0acb75a9e8.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="script.js"></script>
     <title>Pomodoro</title>
   </head>
   <body>
     <main>
       <h1>Pomodoro Timer</h1>
-      <div class="button-methode">
-        <button id="work">Travail</button>
-        <button id="break">Pause</button>
+      <div class="box">
+        <p id="work">Travail</button>
+        <p id="break">Pause</button>
       </div>
 
-      <i class="fa-solid fa-clock"></i>
-      <!--<div>
-        <button>Lancer</button>
-      </div>-->
+      <section class="container">
+        <div id="Timer">
+          <p id="minutes"></p>
+          <p>:</p>
+          <p id="seconds"></p>
+        </div>
+      </section>
+
+      <div class="controls">
+        <button id="start"><i class="fa-solid fa-play"></i></button>
+
+        <button id="reset"><i class="fa-solid fa-rotate-right"></i></button>
+      </div>
     </main>
   </body>
 </html>

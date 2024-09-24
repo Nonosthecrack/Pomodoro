@@ -4,16 +4,14 @@ body {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-}
-main {
-  display: flex;
-  flex-direction: column;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 h1 {
   font-size: 8ch;
 }
-.button-methode {
+.box {
   background-color: #0000ff;
   box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
   border-radius: 5ch;
@@ -22,16 +20,24 @@ h1 {
   margin: auto;
   padding-top: 1ch;
   padding-bottom: 1ch;
-  word-spacing: 4ch;
+  justify-content: space-around;
+  text-align: center;
+  display: flex;
 }
-button {
-  height: 5ch;
-  width: 10ch;
-  cursor: pointer;
-  border: 0px;
+
+.container {
   background-color: #0000ff;
+  border: 2px, solid, black;
+  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  margin: 5ch 30ch 5ch 30ch;
+}
+.controls button {
+  background-color: transparent;
+  border: none;
+}
+p {
   font-size: large;
-  font-family: "Oswald", sans-serif;
+  font-weight: bold;
 }
 button:hover {
   color: wheat;
