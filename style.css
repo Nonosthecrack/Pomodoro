@@ -1,0 +1,38 @@
+body {
+  background: linear-gradient(to right, #0000ff, #00ffff);
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: larger;
+}
+h1 {
+  font-size: 8ch;
+}
+.button-methode {
+  background-color: #0000ff;
+  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 5ch;
+  border: 2px, solid, black;
+  width: 25%;
+  margin: auto;
+  padding-top: 2ch;
+  padding-bottom: 2ch;
+  word-spacing: 4ch;
+}
+button {
+  height: 5ch;
+  width: 10ch;
+  cursor: pointer;
+  border: 0px;
+  background-color: #0000ff;
+  font-size: large;
+}
+button:hover {
+  color: wheat;
+}
