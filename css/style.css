@@ -1,0 +1,72 @@
+body {
+  background: linear-gradient(to right, #ff0000, #ff3300);
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 5vw;
+  text-align: center;
+}
+.box {
+  background-color: #ff0000;
+  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  border-radius: 5ch;
+  border: 0.12vw, solid, black;
+  width: 20vw;
+  margin: auto;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  justify-content: space-around;
+  text-align: center;
+  display: flex;
+}
+p {
+  font-size: large;
+  font-weight: bold;
+}
+
+/*TIMER*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5ch 30ch 5ch 30ch;
+}
+#Timer {
+  text-align: center;
+  background: #ff0000;
+  border-radius: 50%;
+  width: 25vw;
+  height: 25vw;
+  border: 0.12vw solid, black;
+  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#TIMER p {
+  font-size: 1000px; /*change rien*/
+}
+/*CONTROLS*/
+.controls button {
+  background-color: transparent;
+  border: none;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controls button i {
+  font-size: 5vw;
+}
+button:hover {
+  color: wheat;
+}
+button.active {
+  color: wheat;
+}
