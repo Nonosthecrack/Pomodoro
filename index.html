@@ -14,36 +14,39 @@
     />
 
     <script
+      defer
       src="https://kit.fontawesome.com/0acb75a9e8.js"
       crossorigin="anonymous"
     ></script>
-
-    <script src="js/script.js"></script>
     <title>Pomodoro</title>
   </head>
   <body>
     <main>
       <h1>Pomodoro Timer</h1>
       <div class="box">
-        <p id="work">Travail</button>
-        <p id="break">Pause</button>
+        <p id="work">Travail</p>
+        <p id="break">Pause</p>
       </div>
-
       <section class="container">
         <div id="Timer">
           <p id="minutes"></p>
           <p>:</p>
-          <p id="seconds"></p>
+          <p id="secondes"></p>
         </div>
       </section>
 
       <div class="controls">
-        <button id="start"><i class="fa-solid fa-play"></i></button>
+        <button id="start" aria-label="start" onclick="start()">
+          <i class="fa-solid fa-play"></i>
+        </button>
 
-        <button id="reset"><i class="fa-solid fa-rotate-right"></i></button>
+        <button id="reset" aria-label="reset" onclick="reset()">
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
 
         <button id="settings"><i class="fa-solid fa-gear"></i></button>
       </div>
     </main>
+    <script defer src="js/script.js"></script>
   </body>
 </html>
