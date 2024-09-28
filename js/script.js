@@ -1,10 +1,14 @@
 let workTitle = document.getElementById("work");
 let breackTittle = document.getElementById("break");
 
-let work = 25;
-let pause = 5;
+let minute = 25;
+let seconde = 0;
 
-let secondes = 0;
+let minuteW = 25;
+let secondeW = 0;
+
+let minuteB = 5;
+let secondeB = 0;
 
 function afficheTimer(temps) {
   let chronoS = temps.toString();
