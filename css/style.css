@@ -76,3 +76,16 @@ button:hover {
 button.active {
   color: wheat;
 }
+
+/*petits écrans*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6vw;
+  }
+}
+/* écran de moins de 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 8vw;
+  }
+}
