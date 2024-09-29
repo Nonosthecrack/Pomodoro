@@ -19,7 +19,12 @@ let lancerBoutton = document.getElementById("start");
 let resetBoutton = document.getElementById("reset");
 
 //lance la fonction decompte quand le bouton est cliqué
-lancerBoutton.addEventListener("click", lancerDecompte);
+lancerBoutton.addEventListener("click", function () {
+  minute = minuteW;
+  seconde = secondeW;
+  id = setInterval(timer, 1000);
+});
+
 resetBoutton.addEventListener("click", reset);
 
 //fonction qui permetra l'affichage du temps
@@ -66,21 +71,6 @@ function timer() {
     }
   }
 }
-
-function lancerDecompte() {
-  minute = minuteW;
-  seconde = secondeW;
-  id = setInterval(timer, 1000);
-}
-
-function arretDecompte() {
-  clearInterval(id);
-  minute = minuteW;
-  seconde = secondeW;
-  document.getElementById("minutes").innerHTML = afficheTimer(minute);
-  document.getElementById("secondes").innerHTML = afficheTimer(seconde);
-}
-
 function reset() {
   location.reload();
 }
