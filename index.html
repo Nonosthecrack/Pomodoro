@@ -29,13 +29,39 @@
       </div>
 
       <!--Timer-->
-      <section class="container">
+      <section id="container">
         <div id="Timer">
           <p id="minutes"></p>
           <p>:</p>
           <p id="secondes"></p>
         </div>
       </section>
+
+      <!--settings-->
+      <div class="divinput" id="configuration">
+        <div id="travail1">
+          <label id="travail" for="minutes">Travail</label><br />
+          <input
+            type="number"
+            id="minutes"
+            min="0"
+            placeholder="25"
+            autocomplete="off"
+          />
+          <input
+            type="number"
+            id="secondes"
+            min="0"
+            placeholder="00"
+            autocomplete="off"
+          />
+        </div>
+        <div id="pause">
+          <label for="minutesPause">Pause</label><br />
+          <input type="number" id="minutesPause" min="0" placeholder="25" />
+          <input type="number" id="secondesPause" min="0" placeholder="00" />
+        </div>
+      </div>
 
       <div class="controls">
         <button id="start" aria-label="start">
@@ -47,6 +73,8 @@
         </button>
 
         <button id="settings"><i class="fa-solid fa-gear"></i></button>
+
+        <!--<button id="settings2"><i class="fa-solid fa-gear"></i></button>-->
       </div>
     </main>
     <script defer src="js/script.js"></script>

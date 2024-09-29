@@ -36,7 +36,7 @@ p {
 }
 
 /*TIMER*/
-.container {
+#container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +56,13 @@ p {
 }
 #Timer p {
   font-size: 6vw;
+}
+
+#configuration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5vw 30vw 1.5vw 30vw;
 }
 /*CONTROLS*/
 .controls button {

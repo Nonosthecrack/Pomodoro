@@ -17,6 +17,7 @@ let id;
 //variable qui stock l'id boutton lancer
 let lancerBoutton = document.getElementById("start");
 let resetBoutton = document.getElementById("reset");
+let modifierBoutton = document.getElementById("settings");
 
 //lance la fonction decompte quand le bouton est cliqué
 lancerBoutton.addEventListener("click", function () {
@@ -26,6 +27,8 @@ lancerBoutton.addEventListener("click", function () {
 });
 
 resetBoutton.addEventListener("click", reset);
+
+modifierBoutton.addEventListener("click", modifier);
 
 //fonction qui permetra l'affichage du temps
 function afficheTimer(temps) {
@@ -39,6 +42,7 @@ window.onload = () => {
   document.getElementById("reset").style.display = "none";
   document.getElementById("minutes").innerHTML = afficheTimer(minute);
   document.getElementById("secondes").innerHTML = afficheTimer(seconde);
+  document.getElementById("configuration").style.display = "none";
 };
 
 function timer() {
@@ -70,6 +74,13 @@ function timer() {
       pause = true;
     }
   }
+}
+
+function modifier() {
+  document.getElementById("start").style.display = "none";
+  /*document.getElementById("reset").style.display = "none";*/
+  document.getElementById("container").style.display = "none";
+  document.getElementById("configuration").style.display = "block";
 }
 function reset() {
   location.reload();
