@@ -31,7 +31,7 @@ h1 {
   display: flex;
 }
 p {
-  font-size: large;
+  font-size: 1.25vw;
   font-weight: bold;
 }
 
@@ -40,7 +40,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2vw 30vw 2vw 30vw;
+  margin: 1.5vw 30vw 1.5vw 30vw;
 }
 #Timer {
   text-align: center;
