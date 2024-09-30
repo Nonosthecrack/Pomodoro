@@ -1,42 +1,52 @@
 let workTittle = document.getElementById("work");
 let breakTittle = document.getElementById("break");
 
-let minuteW = 0;
-let secondeW = 10;
-let minuteB = 0;
-let secondeB = 5;
-let pause = true;
-let id;
+let minuteW = parseInt(document.getElementById("minutesW").value) || 25;
+let secondeW = parseInt(document.getElementById("secondesW").value) || 0;
+let minuteB = parseInt(document.getElementById("minutesB").value) || 5;
+let secondeB = parseInt(document.getElementById("secondesB").value) || 0;
 let minute = minuteW;
 let seconde = secondeW;
+let pause = true;
+let configurationVisible = false;
+let id;
 
 let lancerBoutton = document.getElementById("start");
 let resetBoutton = document.getElementById("reset");
 let modifierBoutton = document.getElementById("settings");
 
-// Variable pour suivre l'état de l'affichage de la configuration
-let configurationVisible = false;
-
-// Lance la fonction decompte quand le bouton est cliqué
 lancerBoutton.addEventListener("click", function () {
   minute = minuteW;
   seconde = secondeW;
   id = setInterval(timer, 1000);
 });
 
-resetBoutton.addEventListener("click", reset);
+resetBoutton.addEventListener("click", function () {
+  location.reload();
+});
 
-modifierBoutton.addEventListener("click", modifier);
+modifierBoutton.addEventListener("click", function () {
+  configurationVisible = !configurationVisible;
 
-// Fonction qui permet l'affichage du temps
+  if (configurationVisible) {
+    document.getElementById("start").style.display = "none";
+    document.getElementById("container").style.display = "none";
+    document.getElementById("configuration").style.display = "block";
+    document.getElementById("box").style.display = "none";
+  } else {
+    document.getElementById("start").style.display = "block";
+    document.getElementById("container").style.display = "flex";
+    document.getElementById("configuration").style.display = "none";
+    document.getElementById("box").style.display = "flex";
+  }
+});
+
 function afficheTimer(temps) {
   let chronoS = temps.toString();
   chronoS = chronoS.length < 2 ? "0" + chronoS : chronoS;
   return chronoS;
 }
 
-/*domloader*/
-// On affiche le temps et le bouton reset n'apparait pas
 window.onload = () => {
   document.getElementById("reset").style.display = "none";
   document.getElementById("minutes").innerHTML = afficheTimer(minute);
@@ -73,24 +83,4 @@ function timer() {
       pause = true;
     }
   }
-}
-
-function modifier() {
-  configurationVisible = !configurationVisible;
-
-  if (configurationVisible) {
-    document.getElementById("start").style.display = "none";
-    document.getElementById("container").style.display = "none";
-    document.getElementById("configuration").style.display = "block";
-    document.getElementById("box").style.display = "none";
-  } else {
-    document.getElementById("start").style.display = "block";
-    document.getElementById("container").style.display = "flex";
-    document.getElementById("configuration").style.display = "none";
-    document.getElementById("box").style.display = "flex";
-  }
-}
-
-function reset() {
-  location.reload();
 }
