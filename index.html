@@ -38,30 +38,32 @@
       </section>
 
       <!--settings-->
-      <div class="divinput" id="configuration">
-        <div id="travail1">
-          <label id="travail" for="minutes">Travail</label><br />
-          <input
-            type="number"
-            id="minutes"
-            min="0"
-            placeholder="25"
-            autocomplete="off"
-          />
-          <input
-            type="number"
-            id="secondes"
-            min="0"
-            placeholder="00"
-            autocomplete="off"
-          />
+      <section id="configuration">
+        <div class="divinput">
+          <div id="travail1">
+            <label id="travail" for="minutesW">Travail</label><br />
+            <input
+              type="number"
+              id="minutesW"
+              min="0"
+              placeholder="25"
+              autocomplete="off"
+            />
+            <input
+              type="number"
+              id="secondesW"
+              min="0"
+              placeholder="00"
+              autocomplete="off"
+            />
+          </div>
+          <div id="pause">
+            <label id="pause1" for="minutesB">Pause</label><br />
+            <input type="number" id="minutesB" min="0" placeholder="25" />
+            <input type="number" id="secondesB" min="0" placeholder="00" />
+          </div>
         </div>
-        <div id="pause">
-          <label for="minutesPause">Pause</label><br />
-          <input type="number" id="minutesPause" min="0" placeholder="25" />
-          <input type="number" id="secondesPause" min="0" placeholder="00" />
-        </div>
-      </div>
+      </section>
 
       <div class="controls">
         <button id="start" aria-label="start">

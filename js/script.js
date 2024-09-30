@@ -36,7 +36,7 @@ function afficheTimer(temps) {
   chronoS = chronoS.length < 2 ? "0" + chronoS : chronoS;
   return chronoS;
 }
-
+/*domloader*/
 //on affiche le temps et le bouton reset n'apparait pas
 window.onload = () => {
   document.getElementById("reset").style.display = "none";
@@ -78,7 +78,6 @@ function timer() {
 
 function modifier() {
   document.getElementById("start").style.display = "none";
-  /*document.getElementById("reset").style.display = "none";*/
   document.getElementById("container").style.display = "none";
   document.getElementById("configuration").style.display = "block";
 }

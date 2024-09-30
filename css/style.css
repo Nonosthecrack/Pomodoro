@@ -64,6 +64,27 @@ p {
   align-items: center;
   margin: 1.5vw 30vw 1.5vw 30vw;
 }
+#travail {
+  padding-right: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#travail1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#pause1 {
+  padding-right: 1vw;
+}
+
+#pause {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*CONTROLS*/
 .controls button {
   background-color: transparent;
