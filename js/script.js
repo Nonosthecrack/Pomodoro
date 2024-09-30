@@ -37,6 +37,7 @@ modifierBoutton.addEventListener("click", function () {
   if (configurationVisible) {
     document.getElementById("start").style.display = "none";
     document.getElementById("container").style.display = "none";
+    document.getElementById("reset").style.display = "none";
     document.getElementById("configuration").style.display = "block";
     document.getElementById("box").style.display = "none";
   } else {
@@ -44,6 +45,7 @@ modifierBoutton.addEventListener("click", function () {
     document.getElementById("container").style.display = "flex";
     document.getElementById("configuration").style.display = "none";
     document.getElementById("box").style.display = "flex";
+    document.getElementById("container").style.display = "block";
   }
 });
 
