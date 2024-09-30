@@ -1,0 +1,240 @@
+:root {
+  --rouge: #ad0000;
+  --rouge-tres-clair: #ff0000;
+  --rouge-clair: rgb(255, 65, 0);
+  --box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  --border-width: 0.12vw;
+}
+
+/*STYLES GLOBAUX*/
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  background: linear-gradient(to right, var(--rouge), var(--rouge-clair));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 1vw;
+  font-size: 5vw;
+  text-align: center;
+}
+
+p {
+  font-size: 1.25vw;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3vw;
+}
+/*SECTION ET DIV*/
+.box,
+#Timer,
+#configuration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--rouge-tres-clair);
+  border-radius: 3vw;
+  border: var(--border-width) solid black;
+  box-shadow: var(--box-shadow);
+  margin: auto;
+  margin-bottom: 1vw;
+}
+
+.box {
+  border-radius: 5vw;
+  width: 20vw;
+  gap: 4vw;
+}
+
+#Timer {
+  border-radius: 50%;
+  width: 25vw;
+  height: 25vw;
+}
+
+#Timer p {
+  font-size: 6vw;
+}
+
+#configuration {
+  width: 40vw;
+  height: 30vw;
+}
+
+/*FORMULAIRE*/
+#travail1,
+#pause1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divinput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+  gap: 10vw;
+}
+
+label {
+  font-size: 2vw;
+}
+
+input[type="number"] {
+  width: 4vw;
+  height: 2vw;
+  font-size: 2vw;
+  padding: 0.75vw;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 0.2em;
+  background-color: white;
+  color: black;
+}
+
+#travail1 input,
+#pause1 input {
+  margin-bottom: 0.5vw;
+}
+
+/* CONTROLES */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+}
+
+.controls button i {
+  font-size: 4vw;
+}
+
+button:hover,
+button.active {
+  color: wheat;
+}
+
+.box p.active {
+  opacity: 1;
+  color: white;
+}
+
+/*Pour les tablettes et les petits écrans d'ordinateurs*/
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 4vw;
+  }
+  h2 {
+    font-size: 3vw;
+  }
+  p {
+    font-size: 2vw;
+  }
+  #Timer {
+    width: 30vw;
+    height: 30vw;
+  }
+  #configuration {
+    width: 50vw;
+    height: 35vw;
+  }
+  label {
+    font-size: 1.5vw;
+  }
+  input[type="number"] {
+    width: 6vw;
+    height: 3vw;
+    font-size: 1.5vw;
+  }
+  .controls button i {
+    font-size: 3.5vw;
+  }
+}
+
+/*Pour les petits écrans et téléphones portables (paysage)*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6vw;
+  }
+  h2 {
+    font-size: 5vw;
+  }
+  p {
+    font-size: 3vw;
+  }
+  .box {
+    width: 50vw;
+    padding: 1vw 0;
+    gap: 2vw;
+  }
+  #Timer {
+    width: 40vw;
+    height: 40vw;
+  }
+  #configuration {
+    width: 60vw;
+    height: 45vw;
+  }
+  label {
+    font-size: 2.5vw;
+  }
+  input[type="number"] {
+    width: 8vw;
+    height: 4vw;
+    font-size: 2vw;
+  }
+  .controls button i {
+    font-size: 5vw;
+  }
+}
+
+/*Pour les très petits écrans et téléphones portables (portrait)*/
+@media (max-width: 480px) {
+  h1 {
+    font-size: 8vw;
+  }
+  h2 {
+    font-size: 7vw;
+  }
+  p {
+    font-size: 4vw;
+  }
+  .box {
+    width: 70vw;
+    padding: 1.5vw 0;
+    gap: 2vw;
+  }
+  #Timer {
+    width: 50vw;
+    height: 50vw;
+  }
+  #configuration {
+    width: 80vw;
+    height: 60vw;
+  }
+  label {
+    font-size: 3.5vw;
+  }
+  input[type="number"] {
+    width: 12vw;
+    height: 5vw;
+    font-size: 3vw;
+  }
+  .controls button i {
+    font-size: 6vw;
+  }
+}
