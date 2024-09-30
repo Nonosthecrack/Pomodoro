@@ -1,14 +1,14 @@
 let workTittle = document.getElementById("work");
 let breakTittle = document.getElementById("break");
 
-let minute = 0;
-let seconde = 10;
 let minuteW = 0;
 let secondeW = 10;
 let minuteB = 0;
 let secondeB = 5;
 let pause = true;
 let id;
+let minute = minuteW;
+let seconde = secondeW;
 
 //variable qui stock l'id boutton lancer
 let lancerBoutton = document.getElementById("start");
@@ -64,7 +64,7 @@ function timer() {
       pause = false;
     } else {
       minute = minuteW;
-      seconde = secondeW;
+      seconde = secondeW + 1;
       workTittle.classList.add("active");
       breakTittle.classList.remove("active");
       pause = true;
