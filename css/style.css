@@ -2,21 +2,25 @@
 :root {
   --rouge: #ff0000;
   --rouge-clair: rgb(255, 65, 0);
+  --box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  --border-width: 0.12vw;
 }
 
 /* STYLES GLOBAUX */
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
-  font-style: normal;
   background: linear-gradient(to right, var(--rouge), var(--rouge-clair));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-  margin-top: 0;
-  margin-bottom: 1vw;
+  margin: 0 0 1vw;
   font-size: 5vw;
   text-align: center;
 }
@@ -26,74 +30,85 @@ p {
   font-weight: bold;
 }
 
-/* BOX */
-#box {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  background-color: var(--rouge);
-  border-radius: 5vw;
-  border: 0.12vw solid black;
-  width: 20vw;
-  margin: auto;
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
-  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+h2 {
+  font-size: 3vw;
 }
 
-/* TIMER */
-#container,
+/* BOXES STYLES */
+#box,
+#Timer,
 #configuration {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2vw 30vw;
   text-align: center;
+  background-color: var(--rouge);
+  border-radius: 3vw;
+  border: var(--border-width) solid black;
+  box-shadow: var(--box-shadow);
+  margin: auto;
+  margin-bottom: 1vw;
 }
 
-#configuration {
-  border: 0.12vw solid black;
-  border-radius: 3vw;
-  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+#box {
+  border-radius: 5vw;
+  width: 20vw;
+  padding: 0.5vw 0;
+  gap: 4vw;
 }
 
 #Timer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: var(--rouge);
   border-radius: 50%;
   width: 25vw;
   height: 25vw;
-  border: 0.12vw solid black;
-  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
 }
 
 #Timer p {
   font-size: 6vw;
 }
 
-/* FORMULAIRE DE CONFIGURATION */
-h2 {
-  font-size: 3vw;
+#configuration {
+  width: 40vw;
+  height: 30vw;
 }
+
+/* FORMULAIRE */
+#travail1,
+#pause1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .divinput {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2vw 2vw 2vw 2vw;
-  gap: 4vw;
+  margin: 1vw;
+  gap: 10vw;
 }
+
 label {
   font-size: 2vw;
 }
-#travail,
-#pause {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+input[type="number"] {
+  width: 4vw;
+  height: 2vw;
+  font-size: 2vw;
+  padding: 0.75vw;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 0.2em;
+  background-color: white;
+  color: black;
 }
+
+#travail1 input,
+#pause1 input {
+  margin-bottom: 0.5vw;
+}
+
 /* CONTROLES */
 .controls {
   display: flex;
@@ -115,7 +130,7 @@ button.active {
   color: wheat;
 }
 
-/* MEDIA QUERIES - PETITS ECRANS */
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
   h1 {
     font-size: 6vw;
