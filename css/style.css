@@ -1,4 +1,3 @@
-/* VARIABLES GLOBALES */
 :root {
   --rouge: #ad0000;
   --rouge-tres-clair: #ff0000;
@@ -7,7 +6,7 @@
   --border-width: 0.12vw;
 }
 
-/* STYLES GLOBAUX */
+/*STYLES GLOBAUX*/
 body {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
@@ -34,9 +33,8 @@ p {
 h2 {
   font-size: 3vw;
 }
-
-/* BOXES STYLES */
-#box,
+/*SECTION ET DIV*/
+.box,
 #Timer,
 #configuration {
   display: flex;
@@ -51,10 +49,9 @@ h2 {
   margin-bottom: 1vw;
 }
 
-#box {
+.box {
   border-radius: 5vw;
   width: 20vw;
-  padding: 0.5vw 0;
   gap: 4vw;
 }
 
@@ -73,7 +70,7 @@ h2 {
   height: 30vw;
 }
 
-/* FORMULAIRE */
+/*FORMULAIRE*/
 #travail1,
 #pause1 {
   display: flex;
@@ -131,15 +128,113 @@ button.active {
   color: wheat;
 }
 
-/* MEDIA QUERIES */
+.box p.active {
+  opacity: 1;
+  color: white;
+}
+
+/*Pour les tablettes et les petits écrans d'ordinateurs*/
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 4vw;
+  }
+  h2 {
+    font-size: 3vw;
+  }
+  p {
+    font-size: 2vw;
+  }
+  #Timer {
+    width: 30vw;
+    height: 30vw;
+  }
+  #configuration {
+    width: 50vw;
+    height: 35vw;
+  }
+  label {
+    font-size: 1.5vw;
+  }
+  input[type="number"] {
+    width: 6vw;
+    height: 3vw;
+    font-size: 1.5vw;
+  }
+  .controls button i {
+    font-size: 3.5vw;
+  }
+}
+
+/*Pour les petits écrans et téléphones portables (paysage)*/
 @media (max-width: 768px) {
   h1 {
     font-size: 6vw;
   }
+  h2 {
+    font-size: 5vw;
+  }
+  p {
+    font-size: 3vw;
+  }
+  .box {
+    width: 50vw;
+    padding: 1vw 0;
+    gap: 2vw;
+  }
+  #Timer {
+    width: 40vw;
+    height: 40vw;
+  }
+  #configuration {
+    width: 60vw;
+    height: 45vw;
+  }
+  label {
+    font-size: 2.5vw;
+  }
+  input[type="number"] {
+    width: 8vw;
+    height: 4vw;
+    font-size: 2vw;
+  }
+  .controls button i {
+    font-size: 5vw;
+  }
 }
 
+/*Pour les très petits écrans et téléphones portables (portrait)*/
 @media (max-width: 480px) {
   h1 {
     font-size: 8vw;
+  }
+  h2 {
+    font-size: 7vw;
+  }
+  p {
+    font-size: 4vw;
+  }
+  .box {
+    width: 70vw;
+    padding: 1.5vw 0;
+    gap: 2vw;
+  }
+  #Timer {
+    width: 50vw;
+    height: 50vw;
+  }
+  #configuration {
+    width: 80vw;
+    height: 60vw;
+  }
+  label {
+    font-size: 3.5vw;
+  }
+  input[type="number"] {
+    width: 12vw;
+    height: 5vw;
+    font-size: 3vw;
+  }
+  .controls button i {
+    font-size: 6vw;
   }
 }
