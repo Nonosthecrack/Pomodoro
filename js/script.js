@@ -3,15 +3,11 @@ let breakTittle = document.getElementById("break");
 
 let minute = 0;
 let seconde = 10;
-
 let minuteW = 0;
 let secondeW = 10;
-
 let minuteB = 0;
 let secondeB = 5;
-
 let pause = true;
-
 let id;
 
 //variable qui stock l'id boutton lancer
@@ -80,6 +76,7 @@ function modifier() {
   document.getElementById("start").style.display = "none";
   document.getElementById("container").style.display = "none";
   document.getElementById("configuration").style.display = "block";
+  document.getElementById("box").style.display = "none";
 }
 function reset() {
   location.reload();

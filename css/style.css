@@ -1,48 +1,66 @@
+/* VARIABLES GLOBALES */
 :root {
   --rouge: #ff0000;
-  --rouge-clair: #ff3300ff;
+  --rouge-clair: rgb(255, 65, 0);
 }
 
+/* STYLES GLOBAUX */
 body {
-  background: linear-gradient(to right, var(--rouge), var(--rouge-clair));
+  margin: 0;
+  padding: 0;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-style: normal;
-  margin: 0;
-  padding: 0;
+  background: linear-gradient(to right, var(--rouge), var(--rouge-clair));
 }
+
 h1 {
   margin-top: 0;
   margin-bottom: 1vw;
   font-size: 5vw;
   text-align: center;
 }
-.box {
+
+p {
+  font-size: 1.25vw;
+  font-weight: bold;
+}
+
+/* BOX */
+#box {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
   background-color: var(--rouge);
-  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
   border-radius: 5vw;
   border: 0.12vw solid black;
   width: 20vw;
   margin: auto;
   padding-top: 0.5vw;
   padding-bottom: 0.5vw;
-  justify-content: space-around;
-  text-align: center;
-  display: flex;
-}
-p {
-  font-size: 1.25vw;
-  font-weight: bold;
+  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
 }
 
-/*TIMER*/
-#container {
+/* TIMER */
+#container,
+#configuration {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1.5vw 30vw 1.5vw 30vw;
+  margin: 2vw 30vw;
+  text-align: center;
 }
+
+#configuration {
+  border: 0.12vw solid black;
+  border-radius: 3vw;
+  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+}
+
 #Timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background: var(--rouge);
   border-radius: 50%;
@@ -50,68 +68,60 @@ p {
   height: 25vw;
   border: 0.12vw solid black;
   box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
+
 #Timer p {
   font-size: 6vw;
 }
 
-#configuration {
+/* FORMULAIRE DE CONFIGURATION */
+h2 {
+  font-size: 3vw;
+}
+.divinput {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1.5vw 30vw 1.5vw 30vw;
+  margin: 2vw 2vw 2vw 2vw;
+  gap: 4vw;
 }
-#travail {
-  padding-right: 1vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+label {
+  font-size: 2vw;
 }
-#travail1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#pause1 {
-  padding-right: 1vw;
-}
-
+#travail,
 #pause {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/* CONTROLES */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/*CONTROLS*/
 .controls button {
   background-color: transparent;
   border: none;
 }
-.controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .controls button i {
   font-size: 5vw;
 }
-button:hover {
-  color: wheat;
-}
+
+button:hover,
 button.active {
   color: wheat;
 }
 
-/*petits écrans*/
+/* MEDIA QUERIES - PETITS ECRANS */
 @media (max-width: 768px) {
   h1 {
     font-size: 6vw;
   }
 }
-/* écran de moins de 480px) */
+
 @media (max-width: 480px) {
   h1 {
     font-size: 8vw;

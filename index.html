@@ -23,7 +23,7 @@
   <body>
     <main>
       <h1>Pomodoro Timer</h1>
-      <div class="box">
+      <div id="box">
         <p id="work">Travail</p>
         <p id="break">Pause</p>
       </div>
@@ -39,6 +39,7 @@
 
       <!--settings-->
       <section id="configuration">
+        <h2>Configuration du Timer</h2>
         <div class="divinput">
           <div id="travail1">
             <label id="travail" for="minutesW">Travail</label><br />
@@ -49,6 +50,7 @@
               placeholder="25"
               autocomplete="off"
             />
+            <br />
             <input
               type="number"
               id="secondesW"
@@ -57,9 +59,10 @@
               autocomplete="off"
             />
           </div>
-          <div id="pause">
-            <label id="pause1" for="minutesB">Pause</label><br />
+          <div id="pause1">
+            <label id="pause" for="minutesB">Pause</label><br />
             <input type="number" id="minutesB" min="0" placeholder="25" />
+            <br />
             <input type="number" id="secondesB" min="0" placeholder="00" />
           </div>
         </div>
