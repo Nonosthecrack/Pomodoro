@@ -1,6 +1,7 @@
 /* VARIABLES GLOBALES */
 :root {
-  --rouge: #ff0000;
+  --rouge: #ad0000;
+  --rouge-tres-clair: #ff0000;
   --rouge-clair: rgb(255, 65, 0);
   --box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
   --border-width: 0.12vw;
@@ -42,7 +43,7 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: var(--rouge);
+  background-color: var(--rouge-tres-clair);
   border-radius: 3vw;
   border: var(--border-width) solid black;
   box-shadow: var(--box-shadow);
