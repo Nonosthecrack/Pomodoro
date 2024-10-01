@@ -5,6 +5,9 @@
   --box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
   --border-width: 0.12vw;
 }
+body::-webkit-scrollbar {
+  width: 0;
+}
 
 /*STYLES GLOBAUX*/
 body {
@@ -31,6 +34,7 @@ p {
 }
 
 h2 {
+  margin-top: 0.5vw;
   font-size: 3vw;
 }
 /*SECTION ET DIV*/
@@ -67,7 +71,7 @@ h2 {
 
 #configuration {
   width: 40vw;
-  height: 30vw;
+  height: 28vw;
 }
 
 /*FORMULAIRE*/
@@ -105,6 +109,19 @@ input[type="number"] {
 #travail1 input,
 #pause1 input {
   margin-bottom: 0.5vw;
+}
+
+#valider {
+  padding: 1vw;
+  background-color: var(--rouge-tres-clair);
+  border: var(--border-width), solid, black;
+  border-radius: 3vw;
+  color: white;
+  font-size: 1vw;
+  margin: 0;
+}
+#divValide {
+  margin-bottom: 0;
 }
 
 /* CONTROLES */
