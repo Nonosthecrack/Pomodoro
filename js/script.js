@@ -52,12 +52,12 @@ modifierBoutton.addEventListener("click", function () {
     document.getElementById("box").style.display = "flex";
     document.getElementById("container").style.display = "block";
 
-    updateTimerValues();
+    updateValues();
   }
 });
 
 validerBoutton.addEventListener("click", function () {
-  updateTimerValues();
+  updateValues();
 
   document.getElementById("minutes").innerHTML = afficheTimer(minute);
   document.getElementById("secondes").innerHTML = afficheTimer(seconde);
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*Fonction pour mettre à jour les valeurs du minuteur*/
-function updateTimerValues() {
+function updateValues() {
   minuteW = parseInt(document.getElementById("minutesW").value) || 25;
   secondeW = parseInt(document.getElementById("secondesW").value) || 0;
   minuteB = parseInt(document.getElementById("minutesB").value) || 5;

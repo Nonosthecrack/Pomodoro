@@ -5,6 +5,7 @@
   --box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
   --border-width: 0.12vw;
 }
+
 body::-webkit-scrollbar {
   width: 0;
 }
@@ -37,6 +38,7 @@ h2 {
   margin-top: 0.5vw;
   font-size: 3vw;
 }
+
 /*SECTION ET DIV*/
 .box,
 #Timer,
@@ -114,12 +116,14 @@ input[type="number"] {
 #valider {
   padding: 1vw;
   background-color: var(--rouge-tres-clair);
-  border: var(--border-width), solid, black;
+  border: var(--border-width) solid black;
   border-radius: 3vw;
   color: white;
   font-size: 1vw;
   margin: 0;
+  font-family: "Oswald", sans-serif;
 }
+
 #divValide {
   margin-bottom: 0;
 }
@@ -150,7 +154,9 @@ button.active {
   color: white;
 }
 
-/*Pour les tablettes et les petits écrans d'ordinateurs*/
+/*MEDIA QUERIES*/
+
+/* Tablettes et petits écrans d'ordinateurs */
 @media (max-width: 1024px) {
   h1 {
     font-size: 4vw;
@@ -182,16 +188,16 @@ button.active {
   }
 }
 
-/*Pour les petits écrans et téléphones portables (paysage)*/
+/* Petits écrans et téléphones portables (paysage) */
 @media (max-width: 768px) {
   h1 {
-    font-size: 6vw;
-  }
-  h2 {
     font-size: 5vw;
   }
+  h2 {
+    font-size: 4.5vw;
+  }
   p {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
   .box {
     width: 50vw;
@@ -219,16 +225,16 @@ button.active {
   }
 }
 
-/*Pour les très petits écrans et téléphones portables (portrait)*/
+/* Très petits écrans et téléphones portables (portrait) */
 @media (max-width: 480px) {
   h1 {
-    font-size: 8vw;
-  }
-  h2 {
     font-size: 7vw;
   }
+  h2 {
+    font-size: 6vw;
+  }
   p {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .box {
     width: 70vw;
@@ -244,12 +250,12 @@ button.active {
     height: 60vw;
   }
   label {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   input[type="number"] {
-    width: 12vw;
-    height: 5vw;
-    font-size: 3vw;
+    width: 10vw;
+    height: 4.5vw;
+    font-size: 2.5vw;
   }
   .controls button i {
     font-size: 6vw;
