@@ -141,3 +141,32 @@ function timer() {
     }
   }
 }
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    const activeElement = document.activeElement;
+    if (activeElement.id === "start") {
+      lancerBoutton.click();
+    } else if (activeElement.id === "reset") {
+      resetBoutton.click();
+    } else if (activeElement.id === "settings") {
+      modifierBoutton.click();
+    } else if (activeElement.id === "valider") {
+      validerBoutton.click();
+    }
+  }
+});
+
+// Ajoutez des attributs ARIA pour fournir des informations supplémentaires
+document
+  .getElementById("start")
+  .setAttribute("aria-label", "Démarrer le minuteur");
+document
+  .getElementById("reset")
+  .setAttribute("aria-label", "Réinitialiser le minuteur");
+document
+  .getElementById("settings")
+  .setAttribute("aria-label", "Paramètres du minuteur");
+document
+  .getElementById("valider")
+  .setAttribute("aria-label", "Enregistrer le temps");
