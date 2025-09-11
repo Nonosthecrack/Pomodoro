@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,16 +21,18 @@
     <title>Pomodoro</title>
   </head>
   <body>
-    <main>
+    <header>
       <h1>Pomodoro Timer</h1>
+    </header>
+    <main>
       <div class="box">
-        <p id="work">Travail</p>
+        <p id="work" class="active">Travail</p>
         <p id="break">Pause</p>
       </div>
 
       <!--Timer-->
       <section id="container">
-        <div id="Timer">
+        <div id="Timer" aria-live="polite">
           <p id="minutes"></p>
           <p>:</p>
           <p id="secondes"></p>
@@ -42,45 +44,70 @@
         <h2>Configuration du Timer</h2>
         <div class="divinput">
           <div id="travail1">
-            <label id="travail" for="minutesW">Travail:</label><br />
+            <label id="travail" for="minutesW">Minutes de travail:</label><br />
             <input
               type="number"
               id="minutesW"
+              name="minutesW"
               min="0"
               placeholder="25"
               autocomplete="off"
+              aria-label="Minutes de travail"
             />
             <br />
+            <label id="travail" for="secondesW">Secondes de travail:</label
+            ><br />
             <input
               type="number"
               id="secondesW"
+              name="secondesW"
               min="0"
               placeholder="00"
               autocomplete="off"
+              aria-label="Secondes de travail"
             />
           </div>
           <div id="pause1">
-            <label id="pause" for="minutesB">Pause:</label><br />
-            <input type="number" id="minutesB" min="0" placeholder="5" />
+            <label id="pause" for="minutesB">Minutes de pause:</label><br />
+            <input
+              type="number"
+              id="minutesB"
+              name="minutesB"
+              min="0"
+              placeholder="5"
+              aria-label="Minutes de pause"
+            />
             <br />
-            <input type="number" id="secondesB" min="0" placeholder="00" />
+            <label id="pause" for="secondesB">Secondes de pause:</label><br />
+            <input
+              type="number"
+              id="secondesB"
+              name="secondesB"
+              min="0"
+              placeholder="00"
+              aria-label="Secondes de pause"
+            />
           </div>
         </div>
         <div id="divValide">
-          <button id="valider">Enregistrer le temps</button>
+          <button id="valider" aria-label="Enregistrer le temps">
+            Enregistrer le temps
+          </button>
         </div>
       </section>
 
       <div class="controls">
-        <button id="start" aria-label="start">
+        <button id="start" aria-label="Démarrer le minuteur">
           <i class="fa-solid fa-play"></i>
         </button>
 
-        <button id="reset" aria-label="reset">
+        <button id="reset" aria-label="Réinitialiser le minuteur">
           <i class="fa-solid fa-rotate-right"></i>
         </button>
 
-        <button id="settings"><i class="fa-solid fa-gear"></i></button>
+        <button id="settings" aria-label="Paramètres du minuteur">
+          <i class="fa-solid fa-gear"></i>
+        </button>
       </div>
     </main>
     <script defer src="js/script.js"></script>
